@@ -46,32 +46,79 @@ const arr = [
   }
 ];
 
-console.log(arr.map((i) => { return i }));
 
-console.log(arr.filter((f) => { return f.expiry >= 2022 }));
+let filterData = arr.filter((f) => f.expiry >= 2022);
 
-console.log(arr.reduce((g) => { return g.price >= 251 }));
+let ans = arr.filter((f) => f.expiry >=2022 )
+.reduce((acc, d, i) => acc + d.price, 0);
 
-let ans =
-arr.map((d, i) => i)
-arr.map((d, i) => d.expiry >= 2022)
+console.log(ans);
+
+
+//array
+let arr1 = [10,20,30,40,50];
+
+//copy
+let arr2 = [...arr1];
+console.log(arr2);
+
+//merge
+let arr3 =[99,...arr1,100];
+console.log(arr3);
+
+//destructure
+let [maths,eng,guj,ss,sci] = arr1;
+console.log(ss);
+
+
+//object
+let obj ={
+  id : 101,
+  name : "amit"
+};
+
+//copy
+let obj1 = {...obj};
+console.log(obj1);
+
+//merge
+let obj2 ={
+  ...obj,
+  place : 'surat',
+  name : "Sahil"
+};
+console.log(obj2);
+
+//destructure
+let {id, name} = obj;
+console.log (id, name);
+
 
  return (
     <>
-    <table>
-      <th>
+    <table border="1">
+      <tr>
         <td>ID</td>
         <td>Name</td>
-      </th>
+        <td>Quantity</td>
+        <td>Price</td>
+        <td>Expiry</td>
+        <td>Total</td>
+      </tr>
       <tbody>
       {
-        arr.map((d, i) => {
+        filterData.map((d, i) => {
           return (
             <tr>
               <td>{d.id}</td>
               <td>{d.name}</td>
+              <td>{d.quantity}</td>
+              <td>{d.price}</td>
+              <td>{d.expiry}</td>
+              {i === 0 ? <td rowspan = {arr.length}>{ans}</td> :null}
             </tr>
           )
+
         })
       }
       </tbody>
@@ -81,3 +128,4 @@ arr.map((d, i) => d.expiry >= 2022)
 }
 
 export default App;
+        
