@@ -1,4 +1,4 @@
-# Getting Started with Sahil kakadiya
+# Getting Started with Create react App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
