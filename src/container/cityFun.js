@@ -1,21 +1,23 @@
 import React, {useState} from 'react';
 
 function CityFun(props) {
-    const[city, setCity] = useState('Baroda');
-    const[gdp, setGdp] = useState (0)
+    const[country, setCountry] = useState('india');
+    const[city, setCity] = useState ("surat")
 
-    const changecity = () => {
-        setCity('Delhi')
+    const changeCountry = () => {
+        setCountry('US')
+        setCity('New York')
     }
 
     return (
         <div>
+        <p>Country:{country}</p>
         <p>City:{city}</p>
-        <button onClick = {() => changecity()}>Change</button>
-            
-        <p>GDP:{gdp}</p>
-        <button onClick = {() => setGdp(5.5)}>Change GDP</button>
+        <button onClick = {() => changeCountry()}>Change</button>
+        <br/>
         </div>
+            
+       
     );
 }
 
