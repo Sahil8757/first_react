@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function CountryFun(props) {
+function CountryFun({Gdp}) {
     const[country, setCountry] = useState('India');
     const[gdp, setGdp] = useState (0)
 
@@ -14,7 +14,7 @@ function CountryFun(props) {
         <button onClick = {() => changecountry()}>Change</button>
             
         <p>GDP:{gdp}</p>
-        <button onClick = {() => setGdp(5.5)}>Change GDP</button>
+        <button onClick = {() => setGdp(Gdp)}>Change GDP</button>
         </div>
     );
 }
