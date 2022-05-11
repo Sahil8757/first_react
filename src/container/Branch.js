@@ -10,7 +10,7 @@ function Branch(props) {
     const courseName = () => {
         setBranch('Rnw2')
         setCourse('Android')
-    }
+    }          
 
     return (
         <div>

@@ -8,7 +8,7 @@ function Course(CouName) {
         <div>
         {/* <p>{couse}</p> */}
         {
-            CouName === "RNW1" ? <p>Android</p> : <p>NodeJS</p>
+             CouName === "RNW1" ? <p>Android</p> : <p>NodeJS</p>
         }
         </div>
     );
