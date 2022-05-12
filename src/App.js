@@ -5,6 +5,7 @@ import City from './container/city';
 import CountryFun from './container/countryFun';
 import CityFun from './container/cityFun';
 import Time from './Time/Time';
+import TimeFun from './Time/TimeFun';
 // import Branch from './container/Branch';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <CountryFun Gdp={5.8}/>
     <CityFun/>
     <Time/>
+    <TimeFun/>
     {/* <Branch/> */}
     </>
   );

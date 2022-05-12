@@ -31,7 +31,6 @@ class Time extends Component {
 
     componentWillUnmount = () => {
         //5. componentWillUnmount used to release resources from component
-        
         clearInterval(this.TimeId);
     }
 
